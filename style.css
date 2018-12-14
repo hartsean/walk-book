@@ -1,0 +1,263 @@
+#audioplayer{
+	width: 480px;
+	height: 60px;
+	margin: 50px auto auto auto;
+  border: solid;
+}
+
+#pButton{
+    height:60px; 
+    width: 60px;
+    border: none;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    float:left;
+    outline:none;
+}
+
+.play{background: url('http://www.alexkatz.me/codepen/img/play.png') ;}
+.pause{background: url('http://www.alexkatz.me/codepen/img/pause.png') ;}
+
+#timeline{
+	width: 400px;
+	height: 20px;
+	margin-top: 20px;
+	float: left;
+	border-radius: 15px;
+	background: rgba(0,0,0,.3);
+  
+}
+#playhead{
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin-top: 1px;
+	background: rgba(0, 0, 0,1);
+
+}
+.img-fluid a {
+	max-width: 100%;
+	height: auto;
+}
+.gatefold {
+  padding: 25px 0 25px 0;
+}
+.gatefold img {
+  border: none;
+}
+.two-img-row img{
+  border: none;
+  margin-bottom: .7em;
+  padding-top: 25px;
+}
+.site-bg {
+  background-image: url("assets/lightpaperfibers.png");
+  background-repeat: repeat-x repeat-y;
+}
+body {
+  background-image: url("assets/lightpaperfibers.png");
+  background-repeat: repeat-x repeat-y;
+}
+.logo {
+	width: 100%;
+}
+.logo img{
+	width: 20%;
+	height: auto;
+	margin: 0 auto;
+}
+#audio-image-wrapper {
+  position: relative;
+  display: inline;
+}
+#audio-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+h3 {
+  font-family: 'Raleway Dots', sans-serif;
+  font-size: 3em;
+}
+p {
+  font-family: 'Raleway', sans-serif;
+}
+.footer-fin a {
+  color: #000;
+}
+
+/*-- Loader --*/
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #000;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+.audio-icon {
+  z-index: 9999;
+  overflow: visible;
+  position: absolute;
+}
+/* MEDIA QUERIES  */
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  .logo1 img {
+    width: 50%;
+    height: auto;
+    padding-top: 80px; 
+  }
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  .two-img-row img{
+    border: none;
+    margin-bottom: 1em;
+  }
+  
+}
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .logo img {
+    width: 30%;
+    height: auto;
+  }
+  h3 {
+    font-size: 2em;
+    font-family: 'Helvetica', Serif;
+    font-weight: bold;
+  }
+  .two-img-row img{
+    border: none;
+    margin-bottom: 1em;
+  }  
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .logo img {
+    width: 30%;
+    height: auto;
+  }
+  h3 {
+    font-size: 2em;
+    font-family: 'Helvetica', Serif;
+    font-weight: bold;
+  }
+  .two-img-row img{
+    border: none;
+    margin-bottom: 1em;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .logo img {
+    width: 50%;
+    height: auto;
+  }
+  h3 {
+    font-size: 2em;
+    font-family: 'Helvetica', Serif;
+    font-weight: bold;
+  }
+  .two-img-row img{
+    border: none;
+    margin-bottom: 1em;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .logo img {
+    width: 50%;
+    height: auto;
+  }
+  h3 {
+    font-size: 2em;
+    font-family: 'Helvetica', Serif;
+    font-weight: bold;
+    padding-top:.2em;
+  }
+  .two-img-row img{
+    border: none;
+    margin-bottom: 1em;
+  }
+
+}
+

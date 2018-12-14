@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Walk_ Book</title>
+	<!--Walk_ Photo-Book Companion-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Raleway+Dots" rel="stylesheet">
+	<!--Font Awesome CDN -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <!--Bootstrap Core -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!--Custom Style -->
+	<link rel="stylesheet" href="style.css">
+	<!--Custom JS -->
+	<script type="text/javascript" src="js/smooth-scroll.js"></script>
+	<!-- Lazy load Images -->
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
+	<script>
+		var myLazyLoad = new LazyLoad({
+    		elements_selector: ".lazy"
+		});
+	</script>
+	<!--Pre-loader -->
+	<script>
+		var myVar;
+
+		function myFunction() {
+		    myVar = setTimeout(showPage, 3000);
+		}
+
+		function showPage() {
+		  document.getElementById("loader").style.display = "none";
+		  document.getElementById("myDiv").style.display = "block";
+		}
+	</script>
+	<!--Audio Play on Image Click -->
+	<script>
+		var theBoysEl = document.getElementById("theboys");
+		var audioIconEl = document.getElementById("audio-icon");
+		theBoysEl.addEventListener("click", function(e) {
+		  if (audioEl.paused === true) {
+		    audioEl.play();
+		    audioIconEl.style.display = "block";
+		  } else {
+		    audioEl.pause()
+		    audioIconEl.style.display = "none";
+		  }
+		});
+		document.addEventListener('play', function(e){
+		    var audios = document.getElementsByTagName('audio');
+		    for(var i = 0, len = audios.length; i < len;i++){
+		        if(audios[i] != e.target){
+		            audios[i].pause();
+		        }
+		    } 
+		}, true);
+
+
+	</script>
+
+</head>
+	<body onload="myFunction()" style="margin:0;">
+	<div class="site-bg">		
+	  <div id="loader"></div>
+	  	<div id="top" tabindex="-1"></div>
+		<div class="container">
+			<div class="row col-lg-12">
+				<div class="logo text-center"><img src="walk-logo.png" alt="WALK_"></div>
+			</div>
+
+			<div class="row">					
+				<div class="col-lg-12 text-center">
+					<h3>Click on an image to hear the accompanying audio.</h3>
+					<!--<p>&copy; Derek Beck Inc.</p> -->
+				</div>
+			</div>	
+			<hr>
+			<div style="display:none;" id="myDiv" class="animate-bottom"> <!--Loader begin-->
+			  
+			  <div class="row gatefold">
+				<div class="col-lg-12">
+
+					<audio id="aud0">
+					    <source src="audio/02-03.mp3" type="audio/mpeg" />
+					</audio>					
+
+					<div id="audio-image-wrapper">
+					<a href="#" onClick="document.getElementById('aud0').play(); return false;">
+					  <img src="imgs/02-03.jpg" class="img-fluid" id="theboys">
+					</a>
+					<div id="audio-icon">
+					  	<img src="http://walk-book.com/audio-icon.png" id="audio-icon">
+					  </div>
+					</div>
+
+				</div>
+			  </div>
+
+			  <hr>
+				<div class="row two-img-row">					
+					<div class="col-lg-6">
+						<audio id="aud">
+					    <source src="audio/04.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg"  alt="..." class="lazy img-fluid" data-src="imgs/04.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud1">
+					    <source src="audio/05.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud1').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg"  alt="..." class="lazy img-fluid" data-src="imgs/05.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+			
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud2">
+					    <source src="audio/06.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud2').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg"  alt="..." class="lazy img-fluid" data-src="imgs/06.jpg" width="600px" height="400px">
+					</a>
+					</div>					
+					<div class="col-lg-6">
+						<audio id="aud3">
+					    <source src="audio/07.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud3').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg"  alt="..." class="lazy img-fluid" data-src="imgs/07.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud4">
+					    <source src="audio/08.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud4').play(); return false;">
+					  <img src="walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/08.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud5">
+					    <source src="audio/09.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud5').play(); return false;">
+					  <img src="walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/09.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">				
+					<div class="col-lg-6">
+						<audio id="aud6">
+					    <source src="audio/10.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud6').play(); return false;">
+					  <img src="walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/10.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud7">
+					    <source src="audio/11.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud7').play(); return false;">
+					  <img src="walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/11.jpg" width="600px"height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud8">
+					    <source src="audio/12.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud8').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/12.jpg" width="600px" height="400px">
+					</a>
+					</div>				
+					<div class="col-lg-6">
+						<audio id="aud9">
+					    <source src="audio/13.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud9').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/13.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+			
+				<div class="row gatefold">
+					<div class="col-lg-12">
+						<audio id="aud10">
+					    <source src="audio/14-15.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud10').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/14-15.jpg" width="1200px" height="800px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud11">
+					    <source src="audio/16.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud11').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/16.jpg" width="600px" height="400px">
+					</a>
+					</div>				
+					<div class="col-lg-6">
+						<audio id="aud12">
+					    <source src="audio/17.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud12').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/17.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud13">
+					    <source src="audio/18.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud13').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/18.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud14">
+					    <source src="audio/19.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud14').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/19.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">				
+					<div class="col-lg-6">
+						<audio id="aud15">
+					    <source src="audio/20.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud15').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/20.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud16">
+					    <source src="audio/21.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud16').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/21.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud17">
+					    <source src="audio/22.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud17').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/22.jpg" width="600px" height="400px">
+					</a>
+					</div>			
+					<div class="col-lg-6">
+						<audio id="aud18">
+					    <source src="audio/23.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud18').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/23.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud19">
+					    <source src="audio/24.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud19').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/24.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud20">
+					    <source src="audio/25.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud20').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/25.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row gatefold">				
+					<div class="col-lg-12">
+						<audio id="aud21">
+					    <source src="audio/26-27.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud21').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/26-27.jpg" width="1200px" height="800px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud22">
+					    <source src="audio/28.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud22').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/28.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud23">
+					    <source src="audio/29.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud23').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/29.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">				
+					<div class="col-lg-6">
+						<audio id="aud24">
+					    <source src="audio/30.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud24').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/30.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud25">
+					    <source src="audio/31.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud25').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/31.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud26">
+					    <source src="audio/32.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud26').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/32.jpg" width="600px" height="400px">
+					</a>
+					</div>			
+					<div class="col-lg-6">
+						<audio id="aud27">
+					    <source src="audio/33.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud27').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/33.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud28">
+					    <source src="audio/34.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud28').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/34.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud29">
+					    <source src="audio/35.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud29').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/35.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">				
+					<div class="col-lg-6">
+						<audio id="aud30">
+					    <source src="audio/36.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud30').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/36.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud32">
+					    <source src="audio/37.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud32').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/37.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row gatefold">
+					<div class="col-lg-12">
+						<audio id="aud33">
+					    <source src="audio/38-39.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud33').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/38-39.jpg" width="1200px" height="800px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">				
+					<div class="col-lg-6">
+						<audio id="aud34">
+					    <source src="audio/40.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud34').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/40.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud35">
+					    <source src="audio/41.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud35').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/41.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud36">
+					    <source src="audio/42.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud36').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/42.jpg" width="600px" height="400px">
+					</a>
+					</div>			
+					<div class="col-lg-6">
+						<audio id="aud37">
+					    <source src="audio/43.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud37').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/43.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud38">
+					    <source src="audio/44.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud38').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/44.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud39">
+					    <source src="audio/45.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud39').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/45.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">				
+					<div class="col-lg-6">
+						<audio id="aud40">
+					    <source src="audio/46.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud40').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/46.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud41">
+					    <source src="audio/47.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud41').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/47.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud42">
+					    <source src="audio/48.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud42').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/48.jpg" width="600px" height="400px">
+					</a>
+					</div>				
+					<div class="col-lg-6">
+						<audio id="aud43">
+					    <source src="audio/49.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud43').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/49.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row gatefold">
+					<div class="col-lg-12">
+						<audio id="aud44">
+					    <source src="audio/50-51.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud44').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/50-51.jpg" width="1200px" height="800px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud45">
+					    <source src="audio/52.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud45').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/52.jpg" width="600px" height="400px">
+					</a>
+					</div>			
+					<div class="col-lg-6">
+						<audio id="aud46">
+					    <source src="audio/53.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud46').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/53.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud47">
+					    <source src="audio/54.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud47').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/54.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud48">
+					    <source src="audio/55.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud48').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/55.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">				
+					<div class="col-lg-6">
+						<audio id="aud49">
+					    <source src="audio/56.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud49').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/56.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud50">
+					    <source src="audio/57.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud50').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/57.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud51">
+					    <source src="audio/58.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud51').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/58.jpg" width="600px" height="400px">
+					</a>
+					</div>			
+					<div class="col-lg-6">
+						<audio id="aud52">
+					    <source src="audio/59.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud52').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/59.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row two-img-row">
+					<div class="col-lg-6">
+						<audio id="aud53">
+					    <source src="audio/60.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud53').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/60.jpg" width="600px" height="400px">
+					</a>
+					</div>
+					<div class="col-lg-6">
+						<audio id="aud54">
+					    <source src="audio/61.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud54').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/61.jpg" width="600px" height="400px">
+					</a>
+					</div>
+				</div>
+				<hr>
+				<div class="row gatefold">				
+					<div class="col-lg-12">
+						<audio id="aud55">
+					    <source src="audio/62-63.mp3" type="audio/mpeg" />
+					</audio>
+					<a href="#" onClick="document.getElementById('aud55').play(); return false;">
+					  <img src="imgs/walk-placeholder.jpg" alt="..." class="lazy img-fluid" data-src="imgs/62-63.jpg" width="1200px" height="800px">
+					</a>
+					</div>
+				</div>
+				<div class="footer-fin">
+					<a href="#top"><i class="fas fa-arrow-up"></i></a>
+					<p>FIN</p>
+				</div>
+			</div><!--end loader -->
+		</div><!--end site-bg-->
+		</div><!--end container-->
+
+	<script>
+		new LazyLoad();
+	</script>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="walk.js"></script>	
+	</body>
+</html>
