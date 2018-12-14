@@ -37,17 +37,7 @@
 	</script>
 	<!--Audio Play on Image Click -->
 	<script>
-		var theBoysEl = document.getElementById("theboys");
-		var audioIconEl = document.getElementById("audio-icon");
-		theBoysEl.addEventListener("click", function(e) {
-		  if (audioEl.paused === true) {
-		    audioEl.play();
-		    audioIconEl.style.display = "block";
-		  } else {
-		    audioEl.pause()
-		    audioIconEl.style.display = "none";
-		  }
-		});
+		
 		document.addEventListener('play', function(e){
 		    var audios = document.getElementsByTagName('audio');
 		    for(var i = 0, len = audios.length; i < len;i++){
@@ -56,8 +46,6 @@
 		        }
 		    } 
 		}, true);
-
-
 	</script>
 
 </head>
@@ -86,14 +74,10 @@
 					    <source src="audio/02-03.mp3" type="audio/mpeg" />
 					</audio>					
 
-					<div id="audio-image-wrapper">
+					
 					<a href="#" onClick="document.getElementById('aud0').play(); return false;">
 					  <img src="imgs/02-03.jpg" class="img-fluid" id="theboys">
 					</a>
-					<div id="audio-icon">
-					  	<img src="http://walk-book.com/audio-icon.png" id="audio-icon">
-					  </div>
-					</div>
 
 				</div>
 			  </div>
@@ -631,7 +615,7 @@
 					</div>
 				</div>
 				<div class="footer-fin">
-					<a href="#top"><i class="fas fa-arrow-up"></i></a>
+					<a href="top"><i class="fas fa-arrow-up"></i></a>
 					<p>FIN</p>
 				</div>
 			</div><!--end loader -->
