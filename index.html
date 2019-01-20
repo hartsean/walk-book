@@ -46,6 +46,14 @@
 		        }
 		    } 
 		}, true);
+		const onPlay = ( audio ) =>{
+			const player = document.getElementById(audio)
+			if ( player.paused){
+				player.play()
+			}else{
+				player.pause()
+			}
+		}
 	</script>
 
 </head>
@@ -73,12 +81,9 @@
 					<audio id="aud0">
 					    <source src="audio/02-03.mp3" type="audio/mpeg" />
 					</audio>					
-
-					
-					<a href="#" onClick="document.getElementById('aud0').play(); return false;">
-					  <img src="imgs/02-03.jpg" class="img-fluid" id="theboys">
-					</a>
-
+					<a href="#" onClick="onPlay('aud0')">
+						<img src="imgs/02-03.jpg" class="img-fluid" id="theboys">
+					  </a>
 				</div>
 			  </div>
 
